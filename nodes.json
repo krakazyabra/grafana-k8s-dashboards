@@ -183,7 +183,7 @@
                             "expr": "sum by (cpu) (irate(node_cpu_seconds_total{cluster=\"$cluster\", job=\"node-exporter\", mode!=\"idle\", instance=\"$instance\"}[5m]))",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{cpu}}`}}",
+                            "legendFormat": "{{cpu}}",
                             "refId": "A"
                         }
                     ],
@@ -287,7 +287,7 @@
                             "expr": "max (sum by (cpu) (irate(node_cpu_seconds_total{cluster=\"$cluster\", job=\"node-exporter\", mode!=\"idle\", instance=\"$instance\"}[2m])) ) * 100\n",
                             "format": "time_series",
                             "intervalFactor": 10,
-                            "legendFormat": "{{`{{ cpu }}`}}",
+                            "legendFormat": "{{ cpu }}",
                             "refId": "A"
                         }
                     ],
@@ -796,14 +796,14 @@
                             "expr": "node:node_filesystem_usage:{cluster=\"$cluster\", instance=\"$instance\"}",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{device}}`}} disk used",
+                            "legendFormat": "{{device}} disk used",
                             "refId": "A"
                         },
                         {
                             "expr": "node:node_filesystem_usage:{cluster=\"$cluster\", instance=\"$instance\"}",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{device}}`}} disk free",
+                            "legendFormat": "{{device}} disk free",
                             "refId": "B"
                         }
                     ],
@@ -907,7 +907,7 @@
                             "expr": "rate(node_network_receive_bytes_total{cluster=\"$cluster\", job=\"node-exporter\", instance=\"$instance\", device!~\"lo\"}[5m])",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{device}}`}}",
+                            "legendFormat": "{{device}}",
                             "refId": "A"
                         }
                     ],
@@ -998,7 +998,7 @@
                             "expr": "rate(node_network_transmit_bytes_total{cluster=\"$cluster\", job=\"node-exporter\", instance=\"$instance\", device!~\"lo\"}[5m])",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{device}}`}}",
+                            "legendFormat": "{{device}}",
                             "refId": "A"
                         }
                     ],
