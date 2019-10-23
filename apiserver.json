@@ -267,7 +267,7 @@
                             "expr": "histogram_quantile(0.99, sum(rate(apiserver_request_duration_seconds_bucket{job=\"apiserver\", instance=~\"$instance\"}[5m])) by (verb, le))",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{verb}}`}}",
+                            "legendFormat": "{{verb}}",
                             "refId": "A"
                         }
                     ],
@@ -371,7 +371,7 @@
                             "expr": "sum(rate(workqueue_adds_total{job=\"apiserver\", instance=~\"$instance\"}[5m])) by (instance, name)",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} {{`{{name}}`}}",
+                            "legendFormat": "{{instance}} {{name}}",
                             "refId": "A"
                         }
                     ],
@@ -462,7 +462,7 @@
                             "expr": "sum(rate(workqueue_depth{job=\"apiserver\", instance=~\"$instance\"}[5m])) by (instance, name)",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} {{`{{name}}`}}",
+                            "legendFormat": "{{instance}} {{name}}",
                             "refId": "A"
                         }
                     ],
@@ -553,7 +553,7 @@
                             "expr": "histogram_quantile(0.99, sum(rate(workqueue_queue_duration_seconds_bucket{job=\"apiserver\", instance=~\"$instance\"}[5m])) by (instance, name, le))",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} {{`{{name}}`}}",
+                            "legendFormat": "{{instance}} {{name}}",
                             "refId": "A"
                         }
                     ],
@@ -657,7 +657,7 @@
                             "expr": "etcd_helper_cache_entry_total{job=\"apiserver\", instance=~\"$instance\"}",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}}",
+                            "legendFormat": "{{instance}}",
                             "refId": "A"
                         }
                     ],
@@ -748,14 +748,14 @@
                             "expr": "sum(rate(etcd_helper_cache_hit_total{job=\"apiserver\",instance=~\"$instance\"}[5m])) by (intance)",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} hit",
+                            "legendFormat": "{{instance}} hit",
                             "refId": "A"
                         },
                         {
                             "expr": "sum(rate(etcd_helper_cache_miss_total{job=\"apiserver\",instance=~\"$instance\"}[5m])) by (instance)",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} miss",
+                            "legendFormat": "{{instance}} miss",
                             "refId": "B"
                         }
                     ],
@@ -846,14 +846,14 @@
                             "expr": "histogram_quantile(0.99,sum(rate(etcd_request_cache_get_duration_seconds_bucket{job=\"apiserver\",instance=~\"$instance\"}[5m])) by (instance, le))",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} get",
+                            "legendFormat": "{{instance}} get",
                             "refId": "A"
                         },
                         {
                             "expr": "histogram_quantile(0.99,sum(rate(etcd_request_cache_add_duration_seconds_bucket{job=\"apiserver\",instance=~\"$instance\"}[5m])) by (instance, le))",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}} miss",
+                            "legendFormat": "{{instance}} miss",
                             "refId": "B"
                         }
                     ],
@@ -957,7 +957,7 @@
                             "expr": "process_resident_memory_bytes{job=\"apiserver\",instance=~\"$instance\"}",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}}",
+                            "legendFormat": "{{instance}}",
                             "refId": "A"
                         }
                     ],
@@ -1048,7 +1048,7 @@
                             "expr": "rate(process_cpu_seconds_total{job=\"apiserver\",instance=~\"$instance\"}[5m])",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}}",
+                            "legendFormat": "{{instance}}",
                             "refId": "A"
                         }
                     ],
@@ -1139,7 +1139,7 @@
                             "expr": "go_goroutines{job=\"apiserver\",instance=~\"$instance\"}",
                             "format": "time_series",
                             "intervalFactor": 2,
-                            "legendFormat": "{{`{{instance}}`}}",
+                            "legendFormat": "{{instance}}",
                             "refId": "A"
                         }
                     ],
